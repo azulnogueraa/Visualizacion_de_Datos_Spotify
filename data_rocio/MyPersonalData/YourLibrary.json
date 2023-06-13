@@ -1,0 +1,140 @@
+{
+  "tracks": [
+    {
+      "artist": "Cris Mj",
+      "album": "Como Te Va",
+      "track": "Como Te Va",
+      "uri": "spotify:track:3y0h34yThCG2qGO4vR0oi5"
+    },
+    {
+      "artist": "Sayian Jimmy",
+      "album": "Flotao",
+      "track": "Flotao",
+      "uri": "spotify:track:0HsI8dYRVnVGpzppNThv1e"
+    },
+    {
+      "artist": "Cris Mj",
+      "album": "Welcome To My World",
+      "track": "Toma Toma",
+      "uri": "spotify:track:6TfLB5H9ThsxXXPCv3438d"
+    },
+    {
+      "artist": "ᴿᵐRealG4life",
+      "album": "Menorcito",
+      "track": "Menorcito",
+      "uri": "spotify:track:6CclxaCN5z7tsM41pVNiQQ"
+    },
+    {
+      "artist": "Cris Mj",
+      "album": "Bichiyal",
+      "track": "Bichiyal",
+      "uri": "spotify:track:6DwvPQUStsslrkVTSQnB9M"
+    },
+    {
+      "artist": "Lolo OG",
+      "album": "Azote",
+      "track": "Azote - Remix",
+      "uri": "spotify:track:6862W0OJNwhytsXSpCQZ5k"
+    },
+    {
+      "artist": "Punto40",
+      "album": "Mini Mini",
+      "track": "Mini Mini",
+      "uri": "spotify:track:3KI4rfS7kRC58Dd4ToY7P3"
+    },
+    {
+      "artist": "Eladio Carrion",
+      "album": "Monarca",
+      "track": "Todo o Nada",
+      "uri": "spotify:track:2zdHRQTOBDk8mM8xBzziFh"
+    },
+    {
+      "artist": "Cris Mj",
+      "album": "Paz Mental",
+      "track": "Paz Mental",
+      "uri": "spotify:track:1otBTx2rWzwH0UsvyxLAfy"
+    },
+    {
+      "artist": "Jere Klein",
+      "album": "6.5",
+      "track": "Donde?",
+      "uri": "spotify:track:5iaGRmDzm4aPhttaOEK8OD"
+    },
+    {
+      "artist": "Benito Martinez",
+      "album": "6 Ring (Tributo Koby Bryant)",
+      "track": "6 Ring (Tributo Koby Bryant)",
+      "uri": "spotify:track:68hcwhnWhDDlzdACBGCLrQ"
+    },
+    {
+      "artist": "BM",
+      "album": "Ven Mami",
+      "track": "Ven Mami",
+      "uri": "spotify:track:7mMmRGHCrxF8T3opGtrpHh"
+    },
+    {
+      "artist": "Harry Nach",
+      "album": "LOKOTRON REMIX",
+      "track": "LOKOTRON REMIX",
+      "uri": "spotify:track:5uq1p5tvZhSTRpZZTwuQPj"
+    },
+    {
+      "artist": "CHRIS LEBROM",
+      "album": "Si Te Vieras Desde Mis Ojos",
+      "track": "Si Te Vieras Desde Mis Ojos",
+      "uri": "spotify:track:1f1IEh2QILqO6ApgGjJYhl"
+    },
+    {
+      "artist": "Lauty Gram",
+      "album": "Vida Gangster",
+      "track": "Vida Gangster",
+      "uri": "spotify:track:4I4FFtKZLtyqw4he9pPtL7"
+    },
+    {
+      "artist": "The La Planta",
+      "album": "DISCOTEKA (feat. Locura Mix)",
+      "track": "DISCOTEKA (feat. Locura Mix)",
+      "uri": "spotify:track:5w7RsSgxxBwdVTSyQDj8Bi"
+    },
+    {
+      "artist": "Lauty Gram",
+      "album": "La Pistola",
+      "track": "La Pistola",
+      "uri": "spotify:track:4n9tFJoRyzeva7Bgy5sCM7"
+    },
+    {
+      "artist": "Cris Mj",
+      "album": "Pensandote",
+      "track": "Pensandote",
+      "uri": "spotify:track:0km3c8Qiwi9kicTSTt9Ld1"
+    },
+    {
+      "artist": "Alejo Isakk",
+      "album": "3 En 1",
+      "track": "3 En 1",
+      "uri": "spotify:track:5HIzCGqvXKVnyziWxL8nL1"
+    }
+  ],
+  "albums": [
+  ],
+  "shows": [
+  ],
+  "episodes": [
+  ],
+  "bannedTracks": [
+  ],
+  "artists": [
+    {
+      "name": "The 1975",
+      "uri": "spotify:artist:3mIj9lX2MWuHmhNCA7LSCW"
+    },
+    {
+      "name": "Tom Waits",
+      "uri": "spotify:artist:7x83XhcMbOTl1UdYsPTuZM"
+    }
+  ],
+  "bannedArtists": [
+  ],
+  "other": [
+  ]
+}
