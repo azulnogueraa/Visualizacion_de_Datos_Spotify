@@ -1,0 +1,13 @@
+body {
+    background-color: black;
+}
+
+.topBar {
+    height: 63px;
+    background-color: black;
+}
+
+.intro {
+    background-color: blueviolet;
+    min-height: calc(calc(var(--vh, 1vh) * 100 ) - 63px);
+}
