@@ -259,13 +259,14 @@ function loadStep2(raw){
 		.data(artistGroup)
 		.join("path")
 			.filter((d,i) => {
-				return top25.map(d => d.key).includes(d.key);
 				if(d.key in rollup.map(d=> d.key)){
 					return true;
 				}
 				else{
 					return false;
 				}
+				return top25.map(d => d.key).includes(d.key);
+				
 				//return i < 250000
 				})
 			.attr("id", d => strip(d.key))
@@ -499,13 +500,13 @@ function handleStepEnter(response) {
 	}
 	
 	if(stepData === 1.1){
-		highlightTier([0,1])
+		highlightTier([0,1,2])
 	}
 	else if(stepData === 1.2){
-		highlightTier([2,3,4])
+		highlightTier([3,4,5,6,7,8])
 	}
 	else if(stepData === 1.3){
-		highlightTier(Array(25).fill().map((x,i) => i+5))
+		highlightTier(Array(25).fill().map((x,i) => i+8))
 	}
 
 	if(stepData === 2.1){

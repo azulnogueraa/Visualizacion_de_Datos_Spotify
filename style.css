@@ -9,6 +9,8 @@ body {
 
 .topBar-left {
     display: grid;
+    grid-template-columns: repeat(2, 0fr);
+    gap: 20px;
 }
 
 .intro {
@@ -27,4 +29,8 @@ body {
 .grafico1 {
     background-color: #0FD760;
     min-height: calc(calc(var(--vh, 1vh) * 100 ) - 63px);
+}
+
+.nofunca{
+    color: #0FD760;
 }
