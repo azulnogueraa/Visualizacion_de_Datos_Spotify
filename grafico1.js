@@ -204,14 +204,14 @@ function loadStep2(raw){
 
 	var artist2dat = d3.rollup(raw, v => d3.cumsum(v.map(d => d.ms_played)), d => d.master_metadata_album_artist_name)
 	//artist2dat = map2arr(artist2dat)
+	console.log(artist2dat)
 
 
-
-	var utcParse = d3.utcParse("%Y-%m-%d %H:%M")
+	var utcParse = d3.utcParse("%Y-%m-%dT%H:%M:%SZ")
 	
 	var scaleTimeX = d3.scaleTime()
-		//.domain(d3.extent(artistGroup, (d) => d.value.map(j => utcParse(j.endTime))))
-		.domain([d3.min(artistGroup, (d) => d3.min(d.value, (j) => utcParse(j.endTime))), d3.max(artistGroup, (d) => d3.max(d.value, (j) => utcParse(j.endTime)))])
+		//.domain(d3.extent(artistGroup, (d) => d.value.map(j => utcParse(j.ts))))
+		.domain([d3.min(artistGroup, (d) => d3.min(d.value, (j) => utcParse(j.ts))), d3.max(artistGroup, (d) => d3.max(d.value, (j) => utcParse(j.ts)))])
 		.range([margin.left, width-margin.right])
 		.nice()
 
@@ -246,7 +246,7 @@ function loadStep2(raw){
 	var line = d3.line()
 		//.x((d) => {d.map(j => utcParse(j.endDate))})
 		//.y((d) => d.map(j => ms2hr(j.msPlayed)))
-		.x((d) => {return scaleTimeX(utcParse(d.endTime))})
+		.x((d) => {return scaleTimeX(utcParse(d.ts))})
 		.y((d,i) => {return scaleTimePlayedY(ms2hr(artist2dat.get(d.master_metadata_album_artist_name)[i])); return scaleTimePlayedY(ms2hr(d.ms_played))})
 
 	var paths = svg.append("g")
