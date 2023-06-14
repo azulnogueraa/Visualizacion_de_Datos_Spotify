@@ -194,7 +194,7 @@ function loadStep2(raw){
 
 	var artistGroup = d3.group(raw, d => d.master_metadata_album_artist_name);
 	artistGroup = map2arr(artistGroup);
-
+	// console.log(artistGroup)
 		
 	var rollup = d3.rollup(raw, v => d3.sum(v, d => ms2hr(d.ms_played)), d => d.master_metadata_album_artist_name)
 	rollup = map2arr(rollup);
@@ -204,7 +204,7 @@ function loadStep2(raw){
 
 	var artist2dat = d3.rollup(raw, v => d3.cumsum(v.map(d => d.ms_played)), d => d.master_metadata_album_artist_name)
 	//artist2dat = map2arr(artist2dat)
-	console.log(artist2dat)
+	// console.log(artist2dat)
 
 
 	var utcParse = d3.utcParse("%Y-%m-%dT%H:%M:%SZ")
@@ -321,7 +321,7 @@ function loadStep2(raw){
 }
 
 function highlightArtistLine(arr){
-	console.log(arr)
+	// console.log(arr)
 	out();
 
 	var path = svg
@@ -459,7 +459,7 @@ function handleStepEnter(response) {
 
 	// update graphic based on step here
 	var stepData = parseFloat(response.element.getAttribute('data-step'));
-	console.log(stepData)
+	// console.log(stepData)
 
 	step.classed("is-active", function(d, i) {
           return i === response.index;
@@ -469,7 +469,7 @@ function handleStepEnter(response) {
 //    chart.select("p").text(response.index + 1);
 
 
-	console.log(stepData === 2)
+	// console.log(stepData === 2)
 	if(stepData === 1 && response.direction == "up"){
 		clear()
 	}
@@ -518,7 +518,7 @@ function handleStepEnter(response) {
 		highlightArtistLine(["Anuel AA"].map((x) => strip(x)))
 	}
 	else if(stepData === 2.4){
-		highlightArtistLine(["null"].map((x) => strip(x)))
+		highlightArtistLine(["Myke Towers"].map((x) => strip(x)))
 	}
 
 
