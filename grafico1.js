@@ -43,13 +43,17 @@ function analyze(raw){
 
 	var temp_name, temp_time = null;
 	for(var i=0; i < raw.length; i++){
-		temp_name = raw[i]["master_metadata_album_artist_name"];
-		temp_time = parseInt(raw[i]["ms_played"])/1000.0/60.0/60.0;
-		if(temp_name in cume_artist_time){
-			cume_artist_time[temp_name] = cume_artist_time[temp_name] + temp_time;
-		}
-		else { 
-			cume_artist_time[temp_name] = temp_time;
+		//estabamos teniendo un problema con un artista
+		if(raw[i]["master_metadata_album_artist_name"] != null){
+
+			temp_name = raw[i]["master_metadata_album_artist_name"];
+			temp_time = parseInt(raw[i]["ms_played"])/1000.0/60.0/60.0;
+			if(temp_name in cume_artist_time){
+				cume_artist_time[temp_name] = cume_artist_time[temp_name] + temp_time;
+			}
+			else { 
+				cume_artist_time[temp_name] = temp_time;
+			}
 		}
 	}
 
@@ -69,7 +73,7 @@ function analyze(raw){
 	data.sort((a,b) => d3.descending(a.total_time, b.total_time));
 
 	data = data.slice(0,25);
-	
+
 
 
 	//var g = svg.append("g");
@@ -190,13 +194,12 @@ function loadStep2(raw){
 
 	var artistGroup = d3.group(raw, d => d.master_metadata_album_artist_name);
 	artistGroup = map2arr(artistGroup);
-	
 
+		
 	var rollup = d3.rollup(raw, v => d3.sum(v, d => ms2hr(d.ms_played)), d => d.master_metadata_album_artist_name)
 	rollup = map2arr(rollup);
 	rollup.sort((a,b) => d3.descending(a.value, b.value));
 	top25 = rollup.slice(0,25);
-
 
 
 	var artist2dat = d3.rollup(raw, v => d3.cumsum(v.map(d => d.ms_played)), d => d.master_metadata_album_artist_name)
@@ -506,16 +509,16 @@ function handleStepEnter(response) {
 	}
 
 	if(stepData === 2.1){
-		highlightArtistLine(["Drake", "J. Cole"].map((x) => strip(x)))
+		highlightArtistLine(["Quevedo", "Drake"].map((x) => strip(x)))
 	}
 	else if(stepData === 2.2){
-		highlightArtistLine(["Post Malone"].map((x) => strip(x)))
+		highlightArtistLine(["Mora"].map((x) => strip(x)))
 	}
 	else if(stepData === 2.3){
-		highlightArtistLine(["Juice WRLD"].map((x) => strip(x)))
+		highlightArtistLine(["Anuel AA"].map((x) => strip(x)))
 	}
 	else if(stepData === 2.4){
-		highlightArtistLine(["Maroon 5"].map((x) => strip(x)))
+		highlightArtistLine(["null"].map((x) => strip(x)))
 	}
 
 
