@@ -7,7 +7,24 @@ body {
     background-color: black;
 }
 
+.topBar-left {
+    display: grid;
+}
+
 .intro {
-    background-color: blueviolet;
+    background-color: #6C00BA;
+    min-height: calc(calc(var(--vh, 1vh) * 100 ) - 63px);
+}
+
+.logo_spotify {
+    width: 40px;
+}
+
+.top_title {
+    color: white;
+}
+
+.grafico1 {
+    background-color: #0FD760;
     min-height: calc(calc(var(--vh, 1vh) * 100 ) - 63px);
 }
