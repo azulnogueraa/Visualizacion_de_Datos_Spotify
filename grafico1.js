@@ -43,7 +43,7 @@ function analyze(raw){
 
 	var temp_name, temp_time = null;
 	for(var i=0; i < raw.length; i++){
-		//estabamos teniendo un problema con un artista (null) entonces ponemos esta condición para que lo pase de largo
+		//estabamos teniendo un problema con un artista (null) entonces ponemos esta condición para que lo evite en el top 25
 		if(raw[i]["master_metadata_album_artist_name"] != null){
 
 			temp_name = raw[i]["master_metadata_album_artist_name"];

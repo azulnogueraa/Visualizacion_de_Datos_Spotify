@@ -30,7 +30,3 @@ body {
     background-color: #0FD760;
     min-height: calc(calc(var(--vh, 1vh) * 100 ) - 63px);
 }
-
-.nofunca{
-    color: #0FD760;
-}
