@@ -3,30 +3,27 @@ body {
 }
 
 .topBar {
-    height: 63px;
-    background-color: black;
+    height: 30px;
+    background-color: #1CD760;
 }
 
-.topBar-left {
-    display: grid;
-    grid-template-columns: repeat(2, 0fr);
-    gap: 20px;
-}
 
 .intro {
+    /* background-color: #6C00BA; */
+    min-height: calc(calc(var(--vh, 1vh) * 100 ) - 30px);
+}
+.vinilos {
     background-color: #6C00BA;
-    min-height: calc(calc(var(--vh, 1vh) * 100 ) - 63px);
+    min-height: calc(calc(var(--vh, 1vh) * 100 ) );
 }
 
 .logo_spotify {
-    width: 40px;
+    width: 50px;
+    padding-left: 5px;
 }
 
-.top_title {
-    color: white;
-}
 
 .grafico1 {
-    background-color: #0FD760;
+    background-color: #1CD760;
     min-height: calc(calc(var(--vh, 1vh) * 100 ) - 63px);
 }
