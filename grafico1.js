@@ -43,7 +43,7 @@ function analyze(raw){
 
 	var temp_name, temp_time = null;
 	for(var i=0; i < raw.length; i++){
-		//estabamos teniendo un problema con un artista
+		//estabamos teniendo un problema con un artista (null) entonces ponemos esta condición para que lo pase de largo
 		if(raw[i]["master_metadata_album_artist_name"] != null){
 
 			temp_name = raw[i]["master_metadata_album_artist_name"];
@@ -506,7 +506,7 @@ function handleStepEnter(response) {
 		highlightTier([3,4,5,6,7,8])
 	}
 	else if(stepData === 1.3){
-		highlightTier(Array(25).fill().map((x,i) => i+8))
+		highlightTier(Array(25).fill().map((x,i) => i+9))
 	}
 
 	if(stepData === 2.1){
