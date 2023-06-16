@@ -4,7 +4,7 @@ function scrollToTop() {
         behavior: 'smooth'
     });
 }
-
+import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js'
 var swiper = new Swiper(".mySwiper", {
     effect: "coverflow", 
     grabCursor: true, 
@@ -18,6 +18,6 @@ var swiper = new Swiper(".mySwiper", {
         slideShadows: true
     },
     loop:true
-})
+});
 
 
