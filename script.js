@@ -4,4 +4,3 @@ function scrollToTop() {
         behavior: 'smooth'
     });
 }
-<script src="./scripts/bar_script.js"></script>
