@@ -4,20 +4,43 @@ function scrollToTop() {
         behavior: 'smooth'
     });
 }
-import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js'
-var swiper = new Swiper(".mySwiper", {
-    effect: "coverflow", 
-    grabCursor: true, 
-    centeredSlides: true, 
-    slidesPerView:"auto", 
-    coverFlowEffect:{
-        rotate:15, 
-        strech:0,
-        depth:300, 
-        modifier:1, 
-        slideShadows: true
+
+// var swiper = new Swiper(".mySwiper", {
+//     effect: "coverflow", 
+//     grabCursor: true, 
+//     centeredSlides: true, 
+//     slidesPerView:"auto", 
+//     coverFlowEffect:{
+//         rotate:15, 
+//         strech:0,
+//         depth:300, 
+//         modifier:1, 
+//         slideShadows: true
+//     },
+//     loop:true
+// });
+
+
+var TrandingSlider = new Swiper('.tranding-slider', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    loop: true,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 100,
+      modifier: 2.5,
     },
-    loop:true
-});
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  });
 
 
