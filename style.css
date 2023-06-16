@@ -321,7 +321,6 @@ body {
  }
 
  .food-rating {
-    /* padding-top: 1rem; */
     display: inline-flex;
     gap: 1rem;
     align-items: center;
