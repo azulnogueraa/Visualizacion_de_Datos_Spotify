@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <head> 
     <meta charset="utf-8">
-    <title> Spotify Mix</title>
+    <title> spotilytics</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="material/vinyl-svgrepo-com.svg" type="png">
-
+    <link rel="shortcut icon" href="material/solo vynil centrado.png" type="png">
 </head>
 
 <body>
-
-    
     <div class="topBar">
-        <img class="logo_spotify" src="material/spotify_logo.png" alt="me"> 
+        <div class="topBarLeft">
+            <img class="logo_spotify" src="material/spotify_logo.png" alt="me"> 
+            <h2 class="spotilytics"> spotilytics </h2>
+        </div>
+        <div class="topBarRight">
+            <h2 class="backtotop" onclick="scrollToTop()">volver al inicio</h2>
+        </div>
     </div>
 
     <div class="intro">
@@ -26,4 +29,9 @@
     <div class="grafico1">
         <!-- grafico1 -->
     </div>
+
+
+
+
+    <script src="script.js"></script>
 </body>

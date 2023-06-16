@@ -1,29 +1,77 @@
+@font-face {
+    font-family: 'GothamMedium';
+    src: url('material/GothamMedium_1.ttf');
+  }
+
 body {
     background-color: black;
+    font-family: 'GothamMedium', sans-serif;
 }
 
 .topBar {
-    height: 30px;
-    background-color: #1CD760;
+    height: 45px;
+    width:99%;
+    position: fixed;
+    top: 0%;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
 }
 
+.topBarLeft {
+    width: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    padding-left: 10px;
+}
+
+.spotilytics{
+    margin: auto;
+    color: white;
+    font-size: 22px;
+    margin: auto;
+    padding-top: 12px;
+}
+
+.backtotop {
+    color: white;
+    font-family: 'GothamMedium', sans-serif;
+    font-size: 22px;
+    text-align: right;
+    padding-right: 10px;
+    padding-top: 12px;
+}
+
+.topBarRight {
+    color: #1CD760;
+}
 
 .intro {
-    /* background-color: #6C00BA; */
-    min-height: calc(calc(var(--vh, 1vh) * 100 ) - 30px);
-}
-.vinilos {
-    background-color: #6C00BA;
-    min-height: calc(calc(var(--vh, 1vh) * 100 ) );
+    min-height: calc(calc(var(--vh, 1vh) * 100 ) - 0px);
 }
 
 .logo_spotify {
-    width: 50px;
+    width: 30px;
     padding-left: 5px;
 }
 
 
+
+
+.vinilos {
+    background-color: #6C00BA;
+    min-height: calc(calc(var(--vh, 1vh) * 100 ) - 45px );
+}
+
+
+
 .grafico1 {
     background-color: #1CD760;
-    min-height: calc(calc(var(--vh, 1vh) * 100 ) - 63px);
+    min-height: calc(calc(var(--vh, 1vh) * 100 ) - 45px);
 }
+
+
+
