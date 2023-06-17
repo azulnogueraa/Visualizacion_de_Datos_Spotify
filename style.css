@@ -331,3 +331,6 @@ body {
     color: var(black);
   }
 
+.num{
+  padding-top: 20px;
+}

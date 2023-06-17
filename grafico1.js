@@ -1,7 +1,7 @@
 
 var margin = ({top: 20, right: 120, bottom: 30, left: 120})
 var height = 500, width=700;
-var font = 'Georgia'
+var font = 'GothamMedium';
 
 var svg = d3.select('.chart')
 	.append('svg')
@@ -17,8 +17,6 @@ var raw = null;
 function loadData(){
 	d3.json("/data_rocio/MyExtendedData/Streaming_History_Audio_2022-2023_6.json", function(d) {
 		return d;
-		//toReturn = {};
-		//return toReturn;
 	})
 	.then(function(d) {
 		raw = d;
@@ -72,7 +70,7 @@ function analyze(raw){
 
 	data.sort((a,b) => d3.descending(a.total_time, b.total_time));
 
-	data = data.slice(0,25);
+	data = data.slice(0,10);
 
 
 
@@ -89,11 +87,18 @@ function analyze(raw){
 		.range([margin.left, width-margin.right])
 		.nice();
 
+	var customColor = ["#11853B", "#139241", "#15A148",  "#17B14F", "#19C357", "#1CD760", "#31DB6E", "#44DE7B", "#55E187", "#64E492", "#72E69C"]
+	
 	var scaleAmountColor = 
+	d3.scaleOrdinal().range(customColor);
 		//d3.scaleSequential(d3.nterpolateGreens)
-		d3.scaleOrdinal(d3.quantize(d3.interpolateWarm, 26))
+		// d3.scaleOrdinal(d3.quantize(d3.interpolateWarm, 25))
 		//.domain([0, d3.max(data, (d,i) => d.total_time)])
 		//.domain(d3.extent(data, (d,i) => d.total_time))
+		// d3.scaleSequential(d3.interpolateYlGn);
+
+	scaleAmountColor.domain([0, d3.max(data, (d,i) => d.total_time)]);
+
 		
 
 	
@@ -107,14 +112,17 @@ function analyze(raw){
 
 	svg.append('g')
 		.style("font-family", font)
-		.style("font-size", "12px")
+		.style("font-size", "15px")
+		.style("color", "black")
 		.attr('class', 'y axis')
 		.attr("transform", `translate(${margin.left},0)`)
 		.call(yAxis);
 
+
 	svg.append("g")
 		.style("font-family", font)
-		.style("font-size", "12px")
+		.style("font-size", "15px")
+		.style("color", "black")
 		.attr('class', 'x axis')
 		.attr("transform", `translate(0,${height - margin.bottom})`)
 		.call(xAxis);
@@ -500,13 +508,13 @@ function handleStepEnter(response) {
 	}
 	
 	if(stepData === 1.1){
-		highlightTier([0,1,2])
+		highlightTier([0,1])
 	}
 	else if(stepData === 1.2){
-		highlightTier([3,4,5,6,7,8])
+		highlightTier([2,3,4])
 	}
 	else if(stepData === 1.3){
-		highlightTier(Array(25).fill().map((x,i) => i+9))
+		highlightTier([5,6,7,8,9])
 	}
 
 	if(stepData === 2.1){
