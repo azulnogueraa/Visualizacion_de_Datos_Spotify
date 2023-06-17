@@ -377,11 +377,10 @@ function strip(orig){
 }
 
 function loadStep3(raw){
-	
 	const annotations = [
 		{
 			note: {
-				label: "Juice WRLD passes away",
+				label: "Juice WRLD fallece",
 				//title: "Annotation title"
 			},
 			x: margin.left + width*2/9,
@@ -391,7 +390,7 @@ function loadStep3(raw){
 		},
 		{
 			note: {
-				label: "Lockdown commences",
+				label: "Época de Parciales",
 				//title: "Annotation title"
 			},
 			x: margin.left + width*2/5,
@@ -404,10 +403,12 @@ function loadStep3(raw){
 
 	const makeAnnotations = d3.annotation()
 		.annotations(annotations)
+		
 
 	svg
 		.append("g")
 		.call(makeAnnotations)
+		
 }
 
 
