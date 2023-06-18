@@ -91,13 +91,12 @@ function analyze(raw){
     .nice();
 
   var customColor = ["#11853B", "#139241", "#15A148",  "#17B14F", "#19C357", "#1CD760", "#31DB6E", "#44DE7B", "#55E187", "#64E492", "#72E69C"]
-  
+ 
   var scaleAmountColor = 
   d3.scaleOrdinal().range(customColor);
 
   scaleAmountColor.domain([0, d3.max(data, (d,i) => d.total_time)]);
 
-    
 
   
   var yAxis = d3.axisLeft(scaleArtistY)
@@ -297,7 +296,7 @@ console.log("rollup", rollup)
     var templabel = svg.select("text");
 
     function over(path) {
-      path.style("mix-blend-mode", null).attr("stroke", "#ddd");
+      //path.style("mix-blend-mode", null).attr("stroke", "#ddd");
       paths
         .attr("stroke", "grey")
         .attr("opacity", 0.1)

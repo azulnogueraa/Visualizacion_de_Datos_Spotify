@@ -5,7 +5,7 @@
     src: url('material/GothamMedium_1.ttf');
   }
 
-/*
+
 body {
     background-color: black;
     font-family: 'GothamMedium', sans-serif;
@@ -20,7 +20,8 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-
+    z-index: 999;
+    box-shadow: 0 4px 15px rgba(103, 103, 103, 0.8);
 }
 
 .topBarLeft {
@@ -80,7 +81,6 @@ body {
     min-height: calc(calc(var(--vh, 1vh) * 100 ) - 45px);
 }
 
- */
 
 
  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
@@ -247,7 +247,7 @@ body {
  
  .tranding-slider-control {
    position: relative;
-   bottom: 3rem;
+   bottom: 0rem;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -333,4 +333,18 @@ body {
 
 .num{
   padding-top: 20px;
+}
+
+audio {
+  width: 450px;
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 50px;
+}
+
+.sidebar {
+  background-color: #000;
+  color: #fff; /* Color del texto en la barra lateral */
+  /* Otros estilos de la barra lateral */
 }
