@@ -9,15 +9,11 @@ var svg = d3.select('.chart')
     .attr('height', height)
 
 
-var customColor = ["#11853B", "#139241", "#15A148",  "#17B14F", "#19C357", "#1CD760", "#31DB6E", "#44DE7B", "#55E187", "#64E492", "#72E69C"]
+// var customColor = ["#11853B", "#139241", "#15A148",  "#17B14F", "#19C357", "#1CD760", "#31DB6E", "#44DE7B", "#55E187", "#64E492", "#72E69C"]
 
-var scaleArtistColor = d3.scaleOrdinal().range(customColor);
+// var scaleArtistColor = d3.scaleOrdinal().range(customColor);
 
-// scaleAmountColor.domain([0, d3.max(data, (d,i) => d.total_time)]);
-
-
-// var scaleArtistColor = 
-//   d3.scaleOrdinal(d3.quantize(d3.interpolateWarm, 10))
+var scaleArtistColor = d3.scaleOrdinal(d3.quantize(d3.interpolateWarm, 10))
 
 
 var raw = null;
@@ -236,7 +232,7 @@ function loadStep2(raw){
     .tickFormat(val => val + " hrs")
 
   var xAxis = d3.axisBottom(scaleTimeX)
-    .ticks(7)
+    .ticks(4)
 
 
   svg.append('g')
@@ -301,7 +297,7 @@ console.log("rollup", rollup)
     var templabel = svg.select("text");
 
     function over(path) {
-      //path.style("mix-blend-mode", null).attr("stroke", "#ddd");
+      path.style("mix-blend-mode", null).attr("stroke", "#ddd");
       paths
         .attr("stroke", "grey")
         .attr("opacity", 0.1)
