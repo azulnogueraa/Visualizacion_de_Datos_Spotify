@@ -278,7 +278,7 @@ function loadStep2(raw){
         
       //  //return i < 250000
       //  })
-      // .attr("id", d => strip(d.key))
+      .attr("id", d => strip(d.key))
       .attr("class", "artist-line")
       .attr("d", d => {
         let path = line(d.value);
@@ -286,7 +286,7 @@ function loadStep2(raw){
       })
       .attr("stroke", (d) => scaleArtistColor(d.key))
       // .on("mouseover", (d) => over(d3.select("#" + strip(d.key))))
-      .on("mouseover", d => over(d3.select("#" + d.key)))
+      .on("mouseover", d => over(d3.select("#" + strip(d.key))))
       .on("mouseout", out)
   
   reveal = path => path.transition()
@@ -334,13 +334,13 @@ function over(path) {
     .attr("x", width/4)
     .attr("y", height/4)
     .attr("font-size","30px")
-	.style("fill", "white")
+	  .style("fill", "white")
     .style("font-family", font)
     .attr("class", "artist-label")
 
   path
     .attr("stroke", (d) => {
-      templabel.text(d.key);
+      // templabel.text(d.key);
       return scaleArtistColor(d.key);
     })
     .attr("opacity", 1)
@@ -363,22 +363,22 @@ function loadStep3(raw){
   const annotations = [
     {
       note: {
-        label: "Juice WRLD fallece",
+        label: "Lanzamiento Myke Towers",
         //title: "Annotation title"
       },
-      x: margin.left + width*2/9,
-      y: margin.top + height*7/8,
-      dy: -150,
+      x: margin.left + width*0.43,
+      y: margin.top + height*0.83,
+      dy: -250,
       dx: -50
     },
     {
       note: {
-        label: "Época de Parciales",
+        label: "Anuncio Drake Lollapalooza",
         //title: "Annotation title"
       },
-      x: margin.left + width*2/5,
-      y: margin.top + height*1/3,
-      dy: -100,
+      x: margin.left + width*0.33,
+      y: margin.top + height*0.6,
+      dy: -70,
       dx: -100
     }
 
