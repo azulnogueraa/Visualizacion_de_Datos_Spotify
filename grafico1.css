@@ -84,3 +84,7 @@ html, body {
 p {
 	text-align: justify;
 }
+
+svg {
+	color: white;
+}

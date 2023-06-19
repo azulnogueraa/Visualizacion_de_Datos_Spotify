@@ -254,6 +254,7 @@ function loadStep2(raw){
     //.y((d) => d.map(j => ms2hr(j.msPlayed)))
     .x((d) => {return scaleTimeX(utcParse(d.ts))})
     .y((d,i) => {return scaleTimePlayedY(ms2hr(artist2dat.get(d.master_metadata_album_artist_name)[i])); return scaleTimePlayedY(ms2hr(d.ms_played))})
+	
 
 // artistGroup
 
@@ -374,6 +375,7 @@ function out() {
   d3.select(this)
     .attr("stroke", (d) => scaleArtistColor(d.key))
     .attr("opacity", 1)
+	
 }
 
 function strip(orig){
