@@ -112,7 +112,7 @@ function analyze(raw){
   svg.append('g')
     .style("font-family", font)
     .style("font-size", "15px")
-    .style("color", "black")
+    .style("color", "white")
     .attr('class', 'y axis')
     .attr("transform", `translate(${margin.left},0)`)
     .call(yAxis);
@@ -121,7 +121,7 @@ function analyze(raw){
   svg.append("g")
     .style("font-family", font)
     .style("font-size", "15px")
-    .style("color", "black")
+    .style("color", "white")
     .attr('class', 'x axis')
     .attr("transform", `translate(0,${height - margin.bottom})`)
     .call(xAxis);
