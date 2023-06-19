@@ -112,7 +112,7 @@ function analyze(raw){
   svg.append('g')
     .style("font-family", font)
     .style("font-size", "15px")
-    .style("color", "black")
+    .style("color", "white")
     .attr('class', 'y axis')
     .attr("transform", `translate(${margin.left},0)`)
     .call(yAxis);
@@ -121,7 +121,7 @@ function analyze(raw){
   svg.append("g")
     .style("font-family", font)
     .style("font-size", "15px")
-    .style("color", "black")
+    .style("color", "white")
     .attr('class', 'x axis')
     .attr("transform", `translate(0,${height - margin.bottom})`)
     .call(xAxis);
@@ -254,6 +254,7 @@ function loadStep2(raw){
     //.y((d) => d.map(j => ms2hr(j.msPlayed)))
     .x((d) => {return scaleTimeX(utcParse(d.ts))})
     .y((d,i) => {return scaleTimePlayedY(ms2hr(artist2dat.get(d.master_metadata_album_artist_name)[i])); return scaleTimePlayedY(ms2hr(d.ms_played))})
+	
 
 // artistGroup
 
@@ -285,42 +286,8 @@ function loadStep2(raw){
       })
       .attr("stroke", (d) => scaleArtistColor(d.key))
       // .on("mouseover", (d) => over(d3.select("#" + strip(d.key))))
-      .on("mouseover", d => over(d3.select(d.key)))
+      .on("mouseover", d => over(d3.select("#" + d.key)))
       .on("mouseout", out)
-
-
-    // var templabel = svg.select("text");
-
-  //   function over(path) {
-  //     //path.style("mix-blend-mode", null).attr("stroke", "#ddd");
-  //     paths
-  //       .attr("stroke", "grey")
-  //       .attr("opacity", 0.1)
-
-  //     templabel.remove();
-
-  //     templabel = svg
-  //       .append("text")
-  //       .attr("x", width/4)
-  //       .attr("y", height/4)
-  //       .attr("font-size","34px")
-  //       .style("font-family", font)
-  //       .attr("class", "artist-label")
-
-  //     path
-  //       .attr("stroke", (d) => {
-  //         templabel.text(d.key);
-  //         return scaleArtistColor(d.key)
-  //       })
-  //       .attr("opacity", 1)
-  //   }
-
-  //   function out() {
-  //     templabel.remove();
-  //     paths
-  //       .attr("stroke", (d) => scaleArtistColor(d.key))
-  //       .attr("opacity", 1)
-  //   }
   
   reveal = path => path.transition()
     .duration(3000)
@@ -354,16 +321,27 @@ function highlightArtistLine(arr){
 }
 
 function over(path) {
+  
   var paths = d3.selectAll(".artist-line")
   paths
     .attr("stroke", "grey")
     .attr("opacity", 0.1)
 
-  d3.selectAll(".artist-label").remove()
+  d3.selectAll(".artist-label").remove();
 
-  d3.select(this)
+  templabel = svg
+    .append("text")
+    .attr("x", width/4)
+    .attr("y", height/4)
+    .attr("font-size","30px")
+	.style("fill", "white")
+    .style("font-family", font)
+    .attr("class", "artist-label")
+
+  path
     .attr("stroke", (d) => {
-      return scaleArtistColor(d.key)
+      templabel.text(d.key);
+      return scaleArtistColor(d.key);
     })
     .attr("opacity", 1)
 }
@@ -371,9 +349,10 @@ function over(path) {
 function out() {
   var paths = d3.selectAll(".artist-line")
   d3.selectAll(".artist-label").remove()
-  d3.select(this)
+  paths
     .attr("stroke", (d) => scaleArtistColor(d.key))
     .attr("opacity", 1)
+	
 }
 
 function strip(orig){
@@ -511,13 +490,13 @@ function handleStepEnter(response) {
   }
   
   if(stepData === 1.1){
-    highlightTier([0,1])
+    highlightTier([0])
   }
   else if(stepData === 1.2){
-    highlightTier([2,3,4])
+    highlightTier([1,2])
   }
   else if(stepData === 1.3){
-    highlightTier([5,6,7,8,9])
+    highlightTier([3,4,5,6,7,8,9])
   }
 
   if(stepData === 2.1){
