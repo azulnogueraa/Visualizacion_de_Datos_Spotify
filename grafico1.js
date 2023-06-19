@@ -333,7 +333,8 @@ function over(path) {
     .append("text")
     .attr("x", width/4)
     .attr("y", height/4)
-    .attr("font-size","34px")
+    .attr("font-size","30px")
+	.style("fill", "white")
     .style("font-family", font)
     .attr("class", "artist-label")
 

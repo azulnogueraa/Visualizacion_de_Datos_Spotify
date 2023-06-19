@@ -348,3 +348,17 @@ audio {
   color: #fff; /* Color del texto en la barra lateral */
   /* Otros estilos de la barra lateral */
 }
+
+
+.BottomBar {
+  height: 200px;
+  width: 100%;
+  /* position: fixed; */
+  /* top: 0%; */
+  background-color: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  /* z-index: 999; */
+  box-shadow: 0 -4px 15px rgba(103, 103, 103, 0.8);
+}
