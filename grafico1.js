@@ -363,7 +363,7 @@ function loadStep3(raw){
   const annotations = [
     {
       note: {
-        label: "Lanzamiento Myke Towers",
+        label: "Lanzamiento Myke Towers", 
         //title: "Annotation title"
       },
       x: margin.left + width*0.43,

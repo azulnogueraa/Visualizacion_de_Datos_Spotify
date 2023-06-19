@@ -89,3 +89,18 @@ svg {
 .artist-label{
 	color: white;
 }
+
+.annotation-note-label{
+	fill: #F46EBE;
+	font-size: 16px;
+}
+
+.connector {
+	stroke: #F46EBE;
+	stroke-width: 2.5px;
+}
+
+.note-line {
+	stroke: #F46EBE;
+	stroke-width: 2.5px;
+}
