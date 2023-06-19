@@ -183,7 +183,7 @@ function highlightTier(arr){
   rect
     .transition()
     .duration(200)
-    .attr("opacity", (d,i) => arr.includes(i) ? 1 : 0.1)
+    .attr("opacity", (d,i) => arr.includes(i) ? 1 : 0.3)
 
 }
 
@@ -325,7 +325,7 @@ function over(path) {
   var paths = d3.selectAll(".artist-line")
   paths
     .attr("stroke", "grey")
-    .attr("opacity", 0.1)
+    .attr("opacity", 0.3)	
 
   d3.selectAll(".artist-label").remove();
 
