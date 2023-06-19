@@ -267,7 +267,7 @@ console.log("rollup", rollup)
     .attr("stroke-miterlimit", 1)
     .attr("stroke-linecap", "round")
     .selectAll("path")
-    .data(artistGroup)
+    .data(artistGroup.filter(d => d.key === "Drake" || d.key === "Quevedo" || d.key === "Feid" || d.key === "Mora" || d.key === "Quevedo" || d.key === "Anuel AA" || d.key === "Myke Towers" || d.key === "Bad Bunny" || d.key === "Miranda!" || d.key === "Eladio Carrion" || d.key === "TINI"))    
     .join("path")
       // .filter((d,i) => {
       //  if(d.key in rollup.map(d=> d.key)){
@@ -366,7 +366,7 @@ function over(path) {
 
   d3.selectAll(".artist-label").remove()
 
-  path
+  d3.select(this)
     .attr("stroke", (d) => {
       return scaleArtistColor(d.key)
     })
@@ -376,7 +376,7 @@ function over(path) {
 function out() {
   var paths = d3.selectAll(".artist-line")
   d3.selectAll(".artist-label").remove()
-  paths
+  d3.select(this)
     .attr("stroke", (d) => scaleArtistColor(d.key))
     .attr("opacity", 1)
 }
