@@ -283,41 +283,42 @@ function loadStep2(raw){
       })
       .attr("stroke", (d) => scaleArtistColor(d.key))
       // .on("mouseover", (d) => over(d3.select("#" + strip(d.key))))
+      .on("mouseover", d => over(d3.select(d.key)))
       .on("mouseout", out)
 
 
-    var templabel = svg.select("text");
+    // var templabel = svg.select("text");
 
-    function over(path) {
-      //path.style("mix-blend-mode", null).attr("stroke", "#ddd");
-      paths
-        .attr("stroke", "grey")
-        .attr("opacity", 0.1)
+  //   function over(path) {
+  //     //path.style("mix-blend-mode", null).attr("stroke", "#ddd");
+  //     paths
+  //       .attr("stroke", "grey")
+  //       .attr("opacity", 0.1)
 
-      templabel.remove();
+  //     templabel.remove();
 
-      templabel = svg
-        .append("text")
-        .attr("x", width/4)
-        .attr("y", height/4)
-        .attr("font-size","34px")
-        .style("font-family", font)
-        .attr("class", "artist-label")
+  //     templabel = svg
+  //       .append("text")
+  //       .attr("x", width/4)
+  //       .attr("y", height/4)
+  //       .attr("font-size","34px")
+  //       .style("font-family", font)
+  //       .attr("class", "artist-label")
 
-      path
-        .attr("stroke", (d) => {
-          templabel.text(d.key);
-          return scaleArtistColor(d.key)
-        })
-        .attr("opacity", 1)
-    }
+  //     path
+  //       .attr("stroke", (d) => {
+  //         templabel.text(d.key);
+  //         return scaleArtistColor(d.key)
+  //       })
+  //       .attr("opacity", 1)
+  //   }
 
-    function out() {
-      templabel.remove();
-      paths
-        .attr("stroke", (d) => scaleArtistColor(d.key))
-        .attr("opacity", 1)
-    }
+  //   function out() {
+  //     templabel.remove();
+  //     paths
+  //       .attr("stroke", (d) => scaleArtistColor(d.key))
+  //       .attr("opacity", 1)
+  //   }
   
   reveal = path => path.transition()
     .duration(3000)
