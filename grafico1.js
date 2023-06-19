@@ -286,42 +286,8 @@ function loadStep2(raw){
       })
       .attr("stroke", (d) => scaleArtistColor(d.key))
       // .on("mouseover", (d) => over(d3.select("#" + strip(d.key))))
-      .on("mouseover", d => over(d3.select(d.key)))
+      .on("mouseover", d => over(d3.select("#" + d.key)))
       .on("mouseout", out)
-
-
-    // var templabel = svg.select("text");
-
-  //   function over(path) {
-  //     //path.style("mix-blend-mode", null).attr("stroke", "#ddd");
-  //     paths
-  //       .attr("stroke", "grey")
-  //       .attr("opacity", 0.1)
-
-  //     templabel.remove();
-
-  //     templabel = svg
-  //       .append("text")
-  //       .attr("x", width/4)
-  //       .attr("y", height/4)
-  //       .attr("font-size","34px")
-  //       .style("font-family", font)
-  //       .attr("class", "artist-label")
-
-  //     path
-  //       .attr("stroke", (d) => {
-  //         templabel.text(d.key);
-  //         return scaleArtistColor(d.key)
-  //       })
-  //       .attr("opacity", 1)
-  //   }
-
-  //   function out() {
-  //     templabel.remove();
-  //     paths
-  //       .attr("stroke", (d) => scaleArtistColor(d.key))
-  //       .attr("opacity", 1)
-  //   }
   
   reveal = path => path.transition()
     .duration(3000)
@@ -355,16 +321,26 @@ function highlightArtistLine(arr){
 }
 
 function over(path) {
+  
   var paths = d3.selectAll(".artist-line")
   paths
     .attr("stroke", "grey")
     .attr("opacity", 0.1)
 
-  d3.selectAll(".artist-label").remove()
+  d3.selectAll(".artist-label").remove();
 
-  d3.select(this)
+  templabel = svg
+    .append("text")
+    .attr("x", width/4)
+    .attr("y", height/4)
+    .attr("font-size","34px")
+    .style("font-family", font)
+    .attr("class", "artist-label")
+
+  path
     .attr("stroke", (d) => {
-      return scaleArtistColor(d.key)
+      templabel.text(d.key);
+      return scaleArtistColor(d.key);
     })
     .attr("opacity", 1)
 }
@@ -372,7 +348,7 @@ function over(path) {
 function out() {
   var paths = d3.selectAll(".artist-line")
   d3.selectAll(".artist-label").remove()
-  d3.select(this)
+  paths
     .attr("stroke", (d) => scaleArtistColor(d.key))
     .attr("opacity", 1)
 	
