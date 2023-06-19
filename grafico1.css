@@ -7,7 +7,7 @@
 html, body {
 	max-width: 100%;
 	font-family: "GothamMedium";
-	background-color: orange;
+	background-color: black;
 }
 
 #scroll {
@@ -66,9 +66,6 @@ html, body {
   color: white;
 }
 
-.nofunca{
-	color: red;
-}
 
 /* .rochi{
 	border-radius: 20%;
