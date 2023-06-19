@@ -9,11 +9,13 @@ var svg = d3.select('.chart')
     .attr('height', height)
 
 
-// var customColor = ["#11853B", "#139241", "#15A148",  "#17B14F", "#19C357", "#1CD760", "#31DB6E", "#44DE7B", "#55E187", "#64E492", "#72E69C"]
+var customColor = ["#11853B", "#139241", "#15A148",  "#17B14F", "#19C357", "#1CD760", "#31DB6E", "#44DE7B", "#55E187", "#64E492", "#72E69C"]
 
-// var scaleArtistColor = d3.scaleOrdinal().range(customColor);
+var scaleArtistColor = d3.scaleOrdinal().range(customColor);
+// scaleArtistColor.domain([0, d3.max(data, (d,i) => d.total_time)]);
 
-var scaleArtistColor = d3.scaleOrdinal(d3.quantize(d3.interpolateWarm, 10))
+
+// var scaleArtistColor = d3.scaleOrdinal(d3.quantize(d3.interpolateRainbow, 10))
 
 
 var raw = null;
