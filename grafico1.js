@@ -199,7 +199,6 @@ function loadStep2(raw){
 
   var artistGroup = d3.group(raw, d => d.master_metadata_album_artist_name);
   artistGroup = map2arr(artistGroup);
-  // console.log(artistGroup)
     
   var rollup = d3.rollup(raw, v => d3.sum(v, d => ms2hr(d.ms_played)), d => d.master_metadata_album_artist_name)
   rollup = map2arr(rollup);
@@ -209,7 +208,6 @@ function loadStep2(raw){
 
   var artist2dat = d3.rollup(raw, v => d3.cumsum(v.map(d => d.ms_played)), d => d.master_metadata_album_artist_name)
   //artist2dat = map2arr(artist2dat)
-  // console.log(artist2dat)
 
 
   var utcParse = d3.utcParse("%Y-%m-%dT%H:%M:%SZ")
@@ -254,9 +252,6 @@ function loadStep2(raw){
     //.y((d) => d.map(j => ms2hr(j.msPlayed)))
     .x((d) => {return scaleTimeX(utcParse(d.ts))})
     .y((d,i) => {return scaleTimePlayedY(ms2hr(artist2dat.get(d.master_metadata_album_artist_name)[i])); return scaleTimePlayedY(ms2hr(d.ms_played))})
-  
-console.log("artistGroup", artistGroup)
-console.log("rollup", rollup)
 
 // artistGroup
 
@@ -283,9 +278,7 @@ console.log("rollup", rollup)
       // .attr("id", d => strip(d.key))
       .attr("class", "artist-line")
       .attr("d", d => {
-        console.log("d.value", d.value)
         let path = line(d.value);
-        console.log('path', path)
         return path
       })
       .attr("stroke", (d) => scaleArtistColor(d.key))
@@ -338,7 +331,6 @@ console.log("rollup", rollup)
 }
 
 function highlightArtistLine(arr){
-  console.log(arr)
   out();
 
   var path = svg
@@ -472,14 +464,12 @@ function handleResize() {
 function handleStepEnter(response) {
   // response = { element, direction, index }
   // fade in current step
-  console.log(response)
   step.classed('is-active', function (d, i) {
     return i === response.index;
   })
 
   // update graphic based on step here
   var stepData = parseFloat(response.element.getAttribute('data-step'));
-  console.log(stepData)
 
   step.classed("is-active", function(d, i) {
           return i === response.index;
@@ -489,7 +479,6 @@ function handleStepEnter(response) {
 //    chart.select("p").text(response.index + 1);
 
 
-  // console.log(stepData === 2)
   if(stepData === 1 && response.direction == "up"){
     clear()
   }
