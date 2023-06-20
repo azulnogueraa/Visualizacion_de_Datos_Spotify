@@ -9,7 +9,7 @@ var svg = d3.select('.chart')
     .attr('height', height)
 
 
-var customColor = ["#11853B", "#139241", "#15A148",  "#17B14F", "#19C357", "#1CD760", "#31DB6E", "#44DE7B", "#55E187", "#64E492", "#72E69C"]
+var customColor = ["#0B5325", "#0D642D", "#11853B",  "#15A148", "#1CD760", "#31DB6E", "#55E187", "#72E69C","#A9F0C1", "#B1F1C7"]
 
 var scaleArtistColor = d3.scaleOrdinal().range(customColor);
 // scaleArtistColor.domain([0, d3.max(data, (d,i) => d.total_time)]);
@@ -92,7 +92,7 @@ function analyze(raw){
     .range([margin.left, width-margin.right])
     .nice();
 
-  var customColor = ["#11853B", "#139241", "#15A148",  "#17B14F", "#19C357", "#1CD760", "#31DB6E", "#44DE7B", "#55E187", "#64E492", "#72E69C"]
+  var customColor = ["#B1F1C7", "#0B5325", "#0D642D", "#11853B",  "#15A148", "#1CD760", "#31DB6E", "#55E187", "#72E69C","#A9F0C1"]
  
   var scaleAmountColor = 
   d3.scaleOrdinal().range(customColor);
@@ -340,7 +340,7 @@ function over(path) {
 
   path
     .attr("stroke", (d) => {
-      // templabel.text(d.key);
+      templabel.text(d.key);
       return scaleArtistColor(d.key);
     })
     .attr("opacity", 1)
@@ -373,7 +373,7 @@ function loadStep3(raw){
     },
     {
       note: {
-        label: "Anuncio Drake Lollapalooza",
+        label: "Drake en el Lollapalooza",
         //title: "Annotation title"
       },
       x: margin.left + width*0.33,
@@ -500,13 +500,13 @@ function handleStepEnter(response) {
   }
 
   if(stepData === 2.1){
-    highlightArtistLine(["Quevedo", "Drake"].map((x) => strip(x)))
+    highlightArtistLine(["Quevedo"].map((x) => strip(x)))
   }
   else if(stepData === 2.2){
     highlightArtistLine(["Mora"].map((x) => strip(x)))
   }
   else if(stepData === 2.3){
-    highlightArtistLine(["Anuel AA"].map((x) => strip(x)))
+    highlightArtistLine(["Feid"].map((x) => strip(x)))
   }
   else if(stepData === 2.4){
     highlightArtistLine(["Myke Towers"].map((x) => strip(x)))
