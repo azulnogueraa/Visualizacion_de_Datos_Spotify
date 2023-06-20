@@ -392,6 +392,7 @@ audio {
 	right: 0;
 	bottom: auto;
 	width: 50%;
+  margin-left: 50%;
 
 
 	/*this makes sure it doesn't jump around and act weird*/
@@ -422,8 +423,9 @@ audio {
 .scroll__text {
   padding: 0 1rem;
   padding-top: 15rem;
-  max-width: 30rem;
+  max-width: 50rem;
   z-index: 10;
+  margin-left: 75px;
 }
 
 .step {
