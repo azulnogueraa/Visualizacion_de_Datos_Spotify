@@ -213,6 +213,7 @@ function analyze(raw){
       .text((d,i) => d3.format(".1f")(d.total_time))
       .attr("fill", "white")
       .style("font-family", font)
+      // .style("stroke", "grey")
 
 }
 
@@ -372,7 +373,7 @@ function over(path) {
   var paths = d3.selectAll(".artist-line")
   paths
     .attr("stroke", "grey")
-    .attr("opacity", 0.3)	
+    .attr("opacity", 0.05)	
 
   d3.selectAll(".artist-label").remove();
 
@@ -602,3 +603,50 @@ function init() {
   // setup resize event
   window.addEventListener('resize', handleResize);
 }
+
+
+// var boton = document.getElementById('miBoton');
+// var imagen = document.getElementById('miImagen');
+
+// boton.addEventListener('mouseover', function() {
+//   imagen.style.display = 'block';
+// });
+
+// boton.addEventListener('mouseout', function() {
+//   imagen.style.display = 'none';
+// });
+
+
+
+
+///////
+var boton = document.getElementById('miBoton');
+
+
+if(document.getElementsByClassName('referencias')){
+  var imagen = document.getElementById('miImagen');
+  boton.addEventListener('mouseover', function() {
+    imagen.style.display = 'block';
+  });
+  
+  boton.addEventListener('mouseout', function() {
+    imagen.style.display = 'none';
+  });
+}
+else{
+  var modal = document.getElementById('modal');
+  var imagenModal = document.getElementById('imagenModal');
+var close = document.getElementsByClassName('close')[0];
+
+boton.addEventListener('click', function() {
+  modal.style.display = 'block';
+});
+
+close.addEventListener('click', function() {
+  modal.style.display = 'none';
+});
+}
+
+
+
+

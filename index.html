@@ -47,10 +47,10 @@
         <h1 class="text-center section-heading">Nuestros Gustos en Spotify</h1>
         <h3 class="text-center section-subheading">- Análisis de las canciones de nuestros artistas favoritos -</h3>
       </div>
-      
-      <div class="button">
-        <h2 class="ref">Referencias</h2>
-      </div>
+
+      <button class="referencias" id="miBoton">Referencias</button>
+		<img id="miImagen" src="material/referencias.png" alt="Imagen">
+
       <div class="container">
         <div class="swiper tranding-slider">
           <div class="swiper-wrapper">
@@ -327,7 +327,13 @@
       </div>
     </section>
 
-    
+    <div class="separador">
+      <p class="sep"> Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+        Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
+        Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
+        Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+      </p>
+    </div>
 
     <div class="grafico1">
         
@@ -354,13 +360,13 @@
             <p> Se puede destacar que Quevedo es el artista con la mayor cantidad de horas de reproducción, y por lo que nos cuenta Rocio, tiene sentido ya que es su artista favorito. Superando las 30 horas invertidas en escuchar su música, esto evidencia claramente que Quevedo ocupa un lugar prominente en sus preferencias musicales. No hay sorpresas en el primer puesto.</p>
           </div>
           <div class="step" data-step='1.2'>
-            <p> En el segundo nivel, nos encontramos con Drake y Feid, con alrededor de 25 horas cada uno. Segun Rocio, ambos siguen siendo de sus artistas preferidos; Drake en el genero de rap, y Feid en el genero del reggaeton.</p>
+            <p> En el segundo nivel, nos encontramos con Drake y Feid, con alrededor de 25 horas cada uno. Según Rocio, ambos siguen siendo de sus artistas preferidos; Drake en el género de rap, y Feid en el género del reggaetón.</p>
           </div>
           <div class="step" data-step='1.3'>
-            <p> En el tercer y ultimo nivel, se encuentran artistas con menos de 20 horas (Mora y Anuel AA estan muy cerca igual!) Aqui nos sorprendemos con la apariencia de Miranda, ya que Rocio nos conto que solo escucho el ultimo album pero no se imaginaba que sea un artista top 10. </p>
+            <p> En el tercer y último nivel, se encuentran artistas con menos de 20 horas (Mora y Anuel AA están muy cerca igual!) Aquí nos sorprendemos con la aparición de Miranda, ya que Rocio nos contó que solo escuchó el último álbum pero no se imaginaba que sea un artista top 10. </p>
           </div>
           <div class="step" data-step='1.4'>
-            <p> Esta informacion sobre el tiempo de reproducción de cada artista es muy interesante, pero esto pasa por alto los patrones de escucha de Rocio a lo largo del tiempo. Vamos a profundizar más en la dimensión temporal. </p>
+            <p> Esta información sobre el tiempo de reproducción de cada artista es muy interesante, pero esto pasa por alto los patrones de escucha de Rocio a lo largo del tiempo. Vamos a profundizar más en la dimensión temporal. </p>
           </div>
           <div class="step" data-step='2'>
             <p> Este gráfico muestra una representación acumulativa de los artistas que Rocio escuchó en el 2022 y lo que va del 2023. Pasa el cursor sobre cada línea para ver a qué artista corresponde.</p>
@@ -406,6 +412,7 @@
 
   </body>
 
+  
   <footer>
    
     <div class="BottomBar">
@@ -413,8 +420,13 @@
           <!-- <img class="logo_spotify" src="material/spotify_logo.png" alt="me">  -->
           <!-- <h2 class="spotilytics"> spotilytics </h2> -->
       </div>
+
       <div class="BottomBarRight">
-        
+        <button class="cualq" id="miBoton">Mostrar imagen</button>
+        <div id="modal" class="modal">
+          <span class="close">&times;</span>
+          <img id="imagenModal" src="material/wrapped.png" alt="Imagen" width="500px">
+        </div>
       </div>
   </div>
   </footer>
