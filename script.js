@@ -173,23 +173,28 @@ function analyze(raw,){
     .attr("transform", `translate(0,${height - margin.bottom})`)
     .call(xAxis);
 
+    // horas del grafico de barras
+  svg.append("text")
+    .attr("class", "x-label")
+    .attr("x", 640)
+    .attr("y", 488)
+    .style("text-anchor", "end")
+    .style("fill", "white")
+    .text("Horas")
+    .style(font, "GothamMedium")
+    .style("font-size", "15px");
 
-  // svg.append("text")
-  //   .attr("class", "x-label")
-  //   .attr("x", 630)
-  //   .attr("y", 488)
-  //   .style("text-anchor", "end")
-  //   .style("fill", "white")
-  //   .text("Horas");
 
-
+    // horas del grafico de lineas
   // svg.append("text")
   //   .attr("class", "y-label")
   //   .attr("x", 83)
-  //   .attr("y", 15)
+  //   .attr("y", 10)
   //   .style("text-anchor", "start")
   //   .style("fill", "white")
-  //   .text("Horas");
+  //   .text("Horas")
+  //   .style(font, "GothamMedium")
+  //   .style("font-size", "15px");
 
   var barg = svg.append("g")
 
