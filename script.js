@@ -174,6 +174,7 @@ function analyze(raw,){
     .call(xAxis);
 
     // horas del grafico de barras
+    
   svg.append("text")
     .attr("class", "x-label")
     .attr("x", 640)
@@ -229,13 +230,14 @@ function analyze(raw,){
 
   newTexts
     .append("text")
-      .attr("text-anchor", "end")
+      .attr("text-anchor", "start")
       .attr("y", (d,i) => scaleArtistY(d.artist) + scaleArtistY.bandwidth()/2.0 +5)
-      .attr("x", (d,i) => scaleAmountX(d.total_time))
+      .attr("x", (d,i) => scaleAmountX(d.total_time) + 10)
       .text((d,i) => d3.format(".1f")(d.total_time))
       .attr("fill", "white")
       .style("font-family", font)
       // .style("stroke", "grey")
+      
 
 }
 

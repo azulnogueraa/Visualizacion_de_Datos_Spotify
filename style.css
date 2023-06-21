@@ -449,10 +449,15 @@ audio {
 } */
 
 #textoyro{
+  display: flex;
 	text-align: center;
 	/* display: block; */
   	/* justify-content: center; */
   	align-items: center;
+}
+
+.rochi {
+  margin-right: 30px;
 }
 
 p {
