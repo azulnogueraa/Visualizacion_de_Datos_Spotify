@@ -87,7 +87,7 @@ function clear() {
 
 }
 
-function analyze(raw){
+function analyze(raw,){
 
   var cume_artist_time = {};
 
@@ -152,7 +152,7 @@ function analyze(raw){
 
 
   var xAxis = d3.axisBottom(scaleAmountX)
-    .tickFormat(val => val + " hrs")
+    .tickFormat(val => val)
     .ticks(4);
 
 
@@ -173,6 +173,23 @@ function analyze(raw){
     .attr("transform", `translate(0,${height - margin.bottom})`)
     .call(xAxis);
 
+
+  // svg.append("text")
+  //   .attr("class", "x-label")
+  //   .attr("x", 630)
+  //   .attr("y", 488)
+  //   .style("text-anchor", "end")
+  //   .style("fill", "white")
+  //   .text("Horas");
+
+
+  // svg.append("text")
+  //   .attr("class", "y-label")
+  //   .attr("x", 83)
+  //   .attr("y", 15)
+  //   .style("text-anchor", "start")
+  //   .style("fill", "white")
+  //   .text("Horas");
 
   var barg = svg.append("g")
 
@@ -276,7 +293,7 @@ function loadStep2(raw){
 
 
   var yAxis = d3.axisLeft(scaleTimePlayedY)
-    .tickFormat(val => val + " hrs")
+    .tickFormat(val => val)
 
   var xAxis = d3.axisBottom(scaleTimeX)
     .ticks(4)
