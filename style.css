@@ -363,7 +363,7 @@ audio {
   /* top: 0%; */
   background-color: black;
   display: grid;
-  margin-right: ;
+  /* margin-right: ; */
   grid-template-columns: 1fr 1fr;
   align-items: right;
   /* z-index: 999; */
