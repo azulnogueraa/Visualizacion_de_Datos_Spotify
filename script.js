@@ -175,15 +175,15 @@ function analyze(raw,){
 
     // horas del grafico de barras
     
-  svg.append("text")
-    .attr("class", "x-label")
-    .attr("x", 640)
-    .attr("y", 488)
-    .style("text-anchor", "end")
-    .style("fill", "white")
-    .text("Horas")
-    .style(font, "GothamMedium")
-    .style("font-size", "15px");
+  // svg.append("text")
+  //   .attr("class", "x-label")
+  //   .attr("x", 640)
+  //   .attr("y", 488)
+  //   .style("text-anchor", "end")
+  //   .style("fill", "white")
+  //   .text("Horas")
+  //   .style(font, "GothamMedium")
+  //   .style("font-size", "15px");
 
 
     // horas del grafico de lineas
@@ -536,6 +536,11 @@ function handleStepEnter(response) {
   if(stepData === 1 && response.direction == "up"){
     clear()
   }
+//horas del grafico de barras
+  // if(stepData === 0.1 && response.direction == "up"){
+  //   clear()
+  // }
+  
   if(stepData === 2 && response.direction == "down"){
     clear()
   }

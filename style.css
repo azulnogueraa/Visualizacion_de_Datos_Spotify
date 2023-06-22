@@ -576,3 +576,12 @@ button:hover{
 	margin-top: 10%;
   padding: 0;
   }
+
+#horas{
+  color: white;
+  font-family: GothamMedium;
+  font-size:  15px;
+  top: 640px;
+  right: 488px;
+  transform: translate(601px, 576px);
+}
