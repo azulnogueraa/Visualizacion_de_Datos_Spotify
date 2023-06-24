@@ -165,13 +165,13 @@ function analyze(raw,){
     .call(yAxis);
 
 
-  svg.append("g")
-    .style("font-family", font)
-    .style("font-size", "15px")
-    .style("color", "white")
-    .attr('class', 'x axis')
-    .attr("transform", `translate(0,${height - margin.bottom})`)
-    .call(xAxis);
+  // svg.append("g")
+  //   .style("font-family", font)
+  //   .style("font-size", "15px")
+  //   .style("color", "white")
+  //   .attr('class', 'x axis')
+  //   .attr("transform", `translate(0,${height - margin.bottom})`)
+  //   .call(xAxis);
 
     // horas del grafico de barras
     
