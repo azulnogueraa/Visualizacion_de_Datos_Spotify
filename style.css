@@ -111,23 +111,23 @@ body {
    scroll-behavior: smooth;
  }
  
- @media (min-width: 14400px) {
+ /* @media (min-width: 9000px) {
    html {
      zoom: 1.5;
    }
- }
+ } */
  
- @media (min-width: 2560px) {
+ /* @media (min-width: 2560px) {
    html {
      zoom: 1.7;
    }
- }
+ } */
  
- @media (min-width: 3860px) {
+ /* @media (min-width: 3860px) {
    html {
      zoom: 2.5;
    }
- }
+ } */
  
  ::-webkit-scrollbar-thumb {
    border-radius: 1rem;
@@ -585,4 +585,9 @@ button:hover{
   top: 640px;
   right: 488px;
   transform: translate(601px, 576px);
+}
+
+
+.nostar{
+  opacity: 0.4;
 }
