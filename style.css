@@ -23,13 +23,21 @@ body {
     z-index: 999;
     box-shadow: 0 4px 15px rgba(103, 103, 103, 0.8);
 }
-
+/*
 .topBarLeft {
     width: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
     padding-left: 10px;
+}*/
+
+.topBarLeft {
+  /* width: 20px; */
+  /* grid-template-columns: 1fr 1fr; */
+  width: auto;
+  grid-template-columns: 20px 2fr;
+  max-width: 200px;
 }
 
 .spotilytics{
@@ -37,7 +45,7 @@ body {
     color: white;
     font-size: 22px;
     margin: auto;
-    padding-top: 12px;
+    padding-top: 0;
 }
 
 .backtotop {
@@ -46,7 +54,7 @@ body {
     font-size: 22px;
     text-align: right;
     padding-right: 10px;
-    padding-top: 12px;
+    padding-top: 0;
 }
 .backtotop:hover{
     color: #1CD760;
@@ -214,13 +222,26 @@ body {
      height: 36rem !important;
    }
  }
- 
+ /*
  .tranding-slide .tranding-slide-img img {
    width: 40rem;
    height: 40rem;
    border-radius: 2rem;
    object-fit: cover;
- }
+ }*/
+
+ .tranding-slide .tranding-slide-img img {
+  width: auto;
+  height: auto;
+  border-radius: 2rem;
+  object-fit: contain;
+  max-width: 100%;
+}
+
+.tranding-slide-img {
+  background: rgba(0, 0, 0, 0.9);
+}
+
  
  .tranding-slide .tranding-slide-content {
    position: absolute;
@@ -230,21 +251,39 @@ body {
    bottom: 0;
  }
  
+ /*
  .tranding-slide-content .food-price{
    position: absolute;
    top: 2.5rem;
    right: 0.1rem;
    color: var(--black);
    font-size: 2rem;
- }
- 
+ }*/
+
+ .tranding-slide-content .food-price {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  color: var(--black);
+  font-size: 1.8rem;
+}
+ /*
  .tranding-slide-content .tranding-slide-content-bottom { 
    font-size: small;
    position: absolute;
    bottom: 3.5rem;
    left: 2rem;
    color: var(--black);
- }
+ }*/
+
+ .tranding-slide-content .tranding-slide-content-bottom { 
+  font-size: small;
+  position: absolute;
+  bottom: 6.5rem;
+  left: 2rem;
+  color: var(--black);
+  position: absolute;
+}
 
  
  .swiper-slide-shadow-left,
@@ -311,12 +350,18 @@ body {
  .tranding-slider-control .slider-arrow::after {
    content: '';
  }
- 
+ /*
  .tranding-slider-control .swiper-pagination {
    position: relative;
    width: 15rem;
    bottom: 0.05rem;
  }
+ */
+ .tranding-slider-control .swiper-pagination {
+  position: relative;
+  width: 16rem;
+  bottom: 0.05rem;
+}
  
  .tranding-slider-control .swiper-pagination .swiper-pagination-bullet {
    filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
@@ -337,17 +382,30 @@ body {
   .rating ion-icon {
     color: var(black);
   }
-
+/*
 .num{
   padding-top: 20px;
+}*/
+
+.num {
+  padding-top: 0;
 }
 
+/*
 audio {
   width: 450px;
   height: 50px;
   margin-top: 20px;
   margin-bottom: 20px;
   padding-left: 50px;
+}*/
+
+audio {
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 
 .sidebar {
@@ -502,7 +560,7 @@ button{
   border-width: 0;
   border-style: none;
   padding: 15px;
-  padding-top: 30px;
+  padding-top: 15px;
   align-content: center; 
   margin: auto;
   text-align: center;
