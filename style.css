@@ -651,3 +651,11 @@ button:hover{
 .nostar{
   opacity: 0.4;
 }
+
+footer p{
+  color: white;
+  padding-top: 30px;
+  padding-left: 30px;
+  text-align: center;
+  
+}
