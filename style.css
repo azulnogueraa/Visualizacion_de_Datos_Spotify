@@ -36,15 +36,17 @@ body {
   /* width: 20px; */
   /* grid-template-columns: 1fr 1fr; */
   width: auto;
-  grid-template-columns: 20px 2fr;
+  grid-template-columns: 30px auto;
   max-width: 200px;
+  display: grid;
+  margin-left: 10px;
 }
 
 .spotilytics{
     margin: auto;
     color: white;
     font-size: 22px;
-    margin: auto;
+    margin-left: 10px;
     padding-top: 0;
 }
 
