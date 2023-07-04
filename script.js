@@ -635,21 +635,35 @@ function init() {
 }
 
 
-// var boton = document.getElementById('miBoton');
-// var imagen = document.getElementById('miImagen');
+var boton_h = document.getElementById('miBoton_h');
+var imagen_h = document.getElementById('miImagen_h');
 
-// boton.addEventListener('mouseover', function() {
-//   imagen.style.display = 'block';
-// });
+boton_h.addEventListener('mouseover', function() {
+  imagen_h.style.display = 'block';
+});
 
-// boton.addEventListener('mouseout', function() {
-//   imagen.style.display = 'none';
-// });
+boton_h.addEventListener('mouseout', function() {
+  imagen_h.style.display = 'none';
+});
+
+var boton_c = document.getElementById('miBoton_c');
+var modal_c = document.getElementById('modal_c');
+var imagenModal_c = document.getElementById('imagenModal_c');
+var close_c = document.getElementsByClassName('close_c')[0];
+
+boton_c.addEventListener('click', function() {
+  modal_c.style.display = 'block';
+});
+
+close_c.addEventListener('click', function() {
+  modal_c.style.display = 'none';
+});
 
 
 
 
 ///////
+/*
 var boton = document.getElementById('miBoton');
 
 
@@ -676,7 +690,7 @@ close.addEventListener('click', function() {
   modal.style.display = 'none';
 });
 }
-
+*/
 
 
 

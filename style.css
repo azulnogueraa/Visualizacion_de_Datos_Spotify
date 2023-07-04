@@ -512,7 +512,6 @@ audio {
 	text-align: center;
 	/* display: block; */
   	/* justify-content: center; */
-  	align-items: center;
 }
 
 .rochi {
@@ -526,7 +525,7 @@ p {
 svg {
 	color: white;
   /* margin-top: 100px; */
-  margin-top: 0px;
+  margin-top: 65px;
 }
 
 .artist-label{
@@ -548,7 +547,7 @@ svg {
 	stroke-width: 2.5px;
 }
 
-#miImagen {
+#miImagen_h {
 	display: none;
 	align-self: center;
   margin: auto;
@@ -602,7 +601,7 @@ button:hover{
 
 }
 
-.modal {
+.modal_h {
 	display: none;
 	position: fixed;
 	z-index: 1;
@@ -612,23 +611,6 @@ button:hover{
 	height: 100%;
 	overflow: auto;
 	background-color: rgba(0, 0, 0, 0.7);
-  }
-  
-  .modal-content {
-	display: block;
-	margin: auto;
-	max-width: 50%;
-	max-height: 50%;
-  }
-  
-  .close {
-	color: white;
-	font-size: 30px;
-	font-weight: bold;
-	position: absolute;
-	top: 10px;
-	right: 20px;
-	cursor: pointer;
   }
   
   .imagenModal{
@@ -654,8 +636,53 @@ button:hover{
 
 footer p{
   color: white;
-  padding-top: 30px;
+  padding-top: 20px;
   padding-left: 30px;
-  text-align: center;
   
 }
+
+/* pegamos el estilo de el wrapped */
+
+.modal_c {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(43, 43, 43, 0.9);
+  }
+  
+  .modal_c-content {
+	display: block;
+	margin: auto;
+	max-width: 50%;
+	max-height: 50%;
+  }
+  
+  .close_c {
+	color: white;
+	font-size: 30px;
+	font-weight: bold;
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	cursor: pointer;
+  width: 100%;
+  height: 100%;
+  }
+  
+  .modal_c img {
+	display: block;
+	margin: auto;
+	margin-top: 10%;
+  }
+
+  #miBoton_c {
+    /* margin-bottom: 60px;
+    margin-top: 0px; */
+    margin: auto;
+    align-content: center;
+  }
