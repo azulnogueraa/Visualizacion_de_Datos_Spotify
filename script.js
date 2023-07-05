@@ -300,9 +300,14 @@ function loadStep2(raw){
     .range([height-margin.bottom, margin.top])
     .nice()
 
-
   var yAxis = d3.axisLeft(scaleTimePlayedY)
-    .tickFormat(val => val)
+  .tickFormat(function(val, index, ticks) {
+    if (index === ticks.length - 1) {
+      return "Horas     " + val;
+    } else {
+      return val;
+    }
+  });
 
   var xAxis = d3.axisBottom(scaleTimeX)
     .ticks(4)
