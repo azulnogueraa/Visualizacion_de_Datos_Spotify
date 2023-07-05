@@ -682,18 +682,6 @@ button:hover{
     align-content: center;
   }
 
-  /* footer .nombres{
-    color: white;
-    padding-top: 30px;
-    padding-left: 30px;
-    
-  }
-  footer .int{
-    color: #929496;
-    padding-top: 30px;
-    padding-left: 30px;
-    
-  } */
 
 
   *{
@@ -712,6 +700,7 @@ button:hover{
   .footer{
     background-color: #000;
     padding: 80px 0;
+    box-shadow: 0 -4px 15px rgba(103, 103, 103, 0.8);
   }
 
   .footer-row{
